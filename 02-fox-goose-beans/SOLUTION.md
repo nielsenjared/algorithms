@@ -1,3 +1,5 @@
+# 02 Solution: Fox, Goose && Beans
+
 1. Take the Goose over
 2. Return
 3. Take the beans over
