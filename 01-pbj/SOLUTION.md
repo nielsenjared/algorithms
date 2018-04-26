@@ -22,31 +22,30 @@ Open Jelly Container, place lid next to container
 
 Take knife
 
-    Place in PB
+Place in PB
 
-        Take out 2 tbsp of PB
+Take out 2 tbsp of PB
 
-        Knife spread PB on Side A Bread across entire area (sizing to be added) for 3 seconds
+Knife spread PB on Side A Bread across entire area (sizing to be added) for 3 seconds
 
-    Repeat 3 times
+Repeat 3 times
 
 Take knife
 
-    Place in Jelly
+Place in Jelly
 
-        Take out 2 tbsp of Jelly
+Take out 2 tbsp of Jelly
 
-        Knife spread Jelly on Side B bread across entire area (sizing to be added) for 3 seconds
+Knife spread Jelly on Side B bread across entire area (sizing to be added) for 3 seconds
 
-    Repeat 3 times
+Repeat 3 times
 
 Take Bread slice side A
 
-    Flip bread slice and place on top Side B
+Flip bread slice and place on top Side B
 
 Take knife
 
-    Cut sandwiched bread from top left to bottom right
-    
+Cut sandwiched bread from top left to bottom right
 
 by [@peakcodes](https://github.com/peakcodes)
