@@ -1,4 +1,5 @@
-const fzbz = [ 1,
+const fzbz = [
+  1,
   2,
   'Fizz',
   4,
@@ -20,6 +21,6 @@ const fzbz = [ 1,
     expect(fizzbuzz).toBeDefined();
   });
 
-  test('', () => {
+  test('run fizzbuzz on 15', () => {
     expect(fizzbuzz(15)).toEqual(fzbz);
   });

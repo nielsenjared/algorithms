@@ -1,4 +1,4 @@
-# Word ladder
+# Word Ladder
 
 Convert the word LISP into the word JAVA in 5 steps or less. You may only change one letter of the word on each step. On every step you should have created a word in the english dictionary.
 

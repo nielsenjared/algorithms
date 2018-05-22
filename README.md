@@ -2,9 +2,12 @@
 
 ## Table of Contents
 
-* [pbj]
-* [fox-goose-beans]
-* [5-or-6]
+* [pbj](/01-pbj)
+* [draw](/02-draw)
+* [ladders](/03-ladders)
+* [fox-goose-beans](/04-fox-goose-beans)
+* [knights-tour](/05-knights-tour)
+* [5-or-6](/)
 * [multiples-5]
 * [even-numbers]
 * [two-fer]
@@ -16,7 +19,7 @@
 * [cipher]
 * [pangram]
 * [gigasecond](/gigasecond)
-* 
+*
 *
 
 ## Testing with Jest

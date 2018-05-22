@@ -14,9 +14,9 @@ const fizzbuzz = (num) => {
   return result;
 }
 
-// const es6y = n => {
-//   // return [...Array(n + 1).keys()].slice(1).map(i => (i % 3 ? '' : 'fizz') + (i % 5 ? '' : 'buzz') || i);
-//   return [...Array(n + 1).keys()].slice(1).map(i => [ [ 'fizz' ][i%3], [ 'buzz' ][i%5] ].join( '' ) || i);
-// }
+const es6y = n => {
+  return [...Array(n + 1).keys()].slice(1).map(i => (i % 3 ? '' : 'fizz') + (i % 5 ? '' : 'buzz') || i);
+  // return [...Array(n + 1).keys()].slice(1).map(i => [ [ 'fizz' ][i%3], [ 'buzz' ][i%5] ].join( '' ) || i);
+}
 
 module.exports = fizzbuzz;
