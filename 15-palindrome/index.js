@@ -7,15 +7,14 @@ function palindrome(str) {
   return true;
 }
 
-// function palindrome(str) {
+// function expression
+// const palindrome = str => {
 //   return str.split('').every((char, i) => {
 //     return char === str[str.length - 1 - i];
 //   });
 // }
 
-//refactored + ES6
-const es6y = str => {
-  return str === str.split('').reverse().join('');
-}
+//es6-y
+// const palindrome = str => str === str.split('').reverse().join('');
 
 module.exports = palindrome;

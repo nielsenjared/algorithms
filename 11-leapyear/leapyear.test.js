@@ -5,9 +5,9 @@ test('isLeap function exists', () => {
 });
 
 test('isLeap returns true', () => {
-  expect(isLeap(1600)).toBeTruthy();
+  expect(isLeap(2000)).toBeTruthy();
 });
 
 test('isLeap returns false', () => {
-  expect(isLeap(1700)).toBeFalsy();
+  expect(isLeap(1900)).toBeFalsy();
 });

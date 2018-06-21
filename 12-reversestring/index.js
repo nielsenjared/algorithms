@@ -7,6 +7,7 @@ const reverseString = str => {
 }
 
 //one liner
-//return str.split('').reduce((rev, char) => char + rev, '');
+// const reverseString = str => str.split('').reduce((rev, char) => char + rev, '');
+
 
 module.exports = reverseString;
