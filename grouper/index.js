@@ -6,13 +6,11 @@ const students = [
   "Marcus",
   "Martina",
   "Abi",
-  "Ian",
-  // "Katie",
+  "Katie",
   "Stanley",
   "Cintia",
   "Sam",
-  // "Salma",
-  "Emily",
+  "Salma",
   "Daniel",
   "Nima"
 ];
@@ -43,9 +41,9 @@ const grouper = (arr, n) => {
   return groups;
 }
 
-console.log("Pairs");
-console.log(grouper(students, 2));
-// console.log("Threes");
-// console.log(grouper(students, 3));
+// console.log("Pairs");
+// console.log(grouper(students, 2));
+console.log("Threes");
+console.log(grouper(students, 3));
 // console.log("Fours");
 // console.log(grouper(students, 4));

@@ -5,3 +5,5 @@ var factorial = function(n) {
         return n * factorial(n - 1);
     }
 }
+
+console.log(factorial(100));
