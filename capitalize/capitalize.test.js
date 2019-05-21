@@ -9,5 +9,5 @@ test('', () => {
 });
 
 test('', () => {
-  expect(capitalize('jumped over the lazy dogs')).toEqual('Jumped Over The Lazy Dogs');
+  expect(capitalize('jumps over the lazy dog')).toEqual('Jumps Over The Lazy Dog');
 });
