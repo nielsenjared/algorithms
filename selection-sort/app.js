@@ -1,7 +1,7 @@
 const unsorted = [10, 1, 9, 2, 8, 3, 7, 4, 6, 5];
 
 const selectionSort = (arr) => {
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length - 1; i++) {
         let min = i;
 
         for (let j = i + 1; j < arr.length; j++) {
