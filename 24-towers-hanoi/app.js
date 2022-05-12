@@ -1,7 +1,8 @@
 const towers = (discCount) => {
 
     const towerOne = [...Array(discCount + 1).keys()].slice(1);
-    const towerTwo = [], towerThree = [];
+    const towerTwo = [];
+    const towerThree = [];
 
     const moveDiscs = (discCount, origin, stage, goal) => {
         if (discCount === 1) {
