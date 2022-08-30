@@ -1,4 +1,4 @@
-const combinator = (set, n) => {
+const combinationGenerator = (set, n) => {
 
 
     return results; 
