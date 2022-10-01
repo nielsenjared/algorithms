@@ -46,3 +46,7 @@ const fibottomUp = n => {
          }
          return x + y;
     }
+
+let result = fibonaive(5);
+
+console.log(result);
