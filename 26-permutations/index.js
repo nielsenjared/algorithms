@@ -1,9 +1,9 @@
 const permutations = (n) => {
     const perms = [];
 
-    let head, tail;
+    let current, remainder;
     
-    if (n.length === 0) {
+    if (n.length <= 0) {
         return [];
     }
     
@@ -12,18 +12,24 @@ const permutations = (n) => {
     }
     
     for (let i = 0; i < n.length; i++) {
-        head = n.slice(i, i + 1);
-        tail = permutations(n.slice(0, i).concat(n.slice(i + 1)));
+        // current = n.slice(i, i + 1);
+        current = [n[i]];
 
-        for (let j = 0; j < tail.length; j++) {
-            let perm = head.concat(tail[j]);
+        let head = n.slice(0, i);
+        let tail = n.slice(i + 1);
+        let shorty = head.concat(tail);
+
+        remainder = permutations(shorty);
+
+        for (let j = 0; j < remainder.length; j++) {
+            let perm = current.concat(remainder[j]);
         perms.push(perm);
         }
     }
     return perms;
 }
 
-const array = [1, 2, 3];
+const array = [1, 2];
 
 let result = permutations(array);
 
