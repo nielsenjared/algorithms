@@ -1,5 +1,3 @@
-// https://en.wikipedia.org/wiki/Quicksort#Hoare_partition_scheme
-
 const swap = (arr, left, right) => {
     let temp = arr[left];
     arr[left] = arr[right];
@@ -29,25 +27,10 @@ const partition = (arr, pivot) => {
     return arr;
 }
 
-const quickSort = (arr, left = 0, right = arr.length - 1) => {
-        if (left >= right) {
-            return;
-        }
-
-        let pivot = Math.floor((left + right) / 2);
-
-        let part = partition(arr, pivot);
-
-        let index = part[pivot];
-
-        quickSort(arr, left, index - 1);
-        quickSort(arr, index, right);
-    return arr;
-}
-
 const unsorted = [10, 1, 9, 2, 8, 3, 7, 4, 6, 5];
 
-let result = quickSort(unsorted);
+console.log(unsorted.length)
+
+let result = partition(unsorted, 5);
 
 console.log(result);
-
