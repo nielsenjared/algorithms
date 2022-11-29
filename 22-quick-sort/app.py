@@ -5,19 +5,20 @@ def swap(arr, left, right):
 
     return arr
 
-def partition(arr, left, right):
-    pivot = arr[ (left + right) // 2 ]
+def partition(arr, pivot):
+    left = 0
+    right = len(arr) - 1
 
     while (left <= right):
         while (arr[left] < pivot):
             left = left + 1
-        while (arr[right] > pivot):
+        while (arr[right] > pivot and right > 0):
             right = right - 1
         if (left <= right):
             swap(arr, left, right)
             left = left + 1
             right = right - 1
-    return left
+    return arr
 
 def quick_sort(arr, left = 0, right = None):
     if right == None:
@@ -25,11 +26,15 @@ def quick_sort(arr, left = 0, right = None):
 
     if (left >= right):
         return
+    
+    pivot = (left + right) // 2
 
-    pivot = partition(arr, left, right)
+    part = partition(arr, pivot)
 
-    quick_sort(arr, left, pivot - 1)
-    quick_sort(arr, pivot, right)
+    index = part[pivot]
+
+    quick_sort(arr, left, index - 1)
+    quick_sort(arr, index, right)
     
     return arr
 

@@ -1,5 +1,3 @@
-// https://en.wikipedia.org/wiki/Quicksort#Hoare_partition_scheme
-
 const swap = (arr, left, right) => {
     let temp = arr[left];
     arr[left] = arr[right];
