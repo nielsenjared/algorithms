@@ -5,26 +5,25 @@ const swap = (arr, left, right) => {
 
     return arr;
 }
+// using Lomuto
+const partition = (arr) => {
 
-const partition = (arr, pivot) => {
     let left = 0;
-    let right = arr.length-1;
+    let right = arr.length - 1;
 
-    while (left <= right) {
-        while (arr[left] < pivot) {
-            left++;
-        }
-        while (arr[right] > pivot) {
-            right--;
-        }
+    let pivot = arr[right];
+    let index = left; 
 
-        if (left <= right) {
-            swap(arr, left, right);
-            left++;
-            right--;
+    for (let i = 0; i < right; i++) {
+        if (arr[i] <= pivot) {
+            swap(arr, index, i);
+            index++;
         }
     }
-    return arr;
+    swap(arr, index, right);
+    index++;
+    
+    return { index, arr };
 }
 
 const quickSort = (arr, left = 0, right = arr.length - 1) => {
@@ -32,11 +31,13 @@ const quickSort = (arr, left = 0, right = arr.length - 1) => {
             return;
         }
 
-        let pivot = Math.floor((left + right) / 2);
+        let part = partition(arr);
 
-        let part = partition(arr, pivot);
+        let index = part.index;
 
-        let index = part[pivot];
+        left = part.arr[0];
+
+        right = part.arr[part.arr.length - 1];
 
         quickSort(arr, left, index - 1);
         quickSort(arr, index, right);
