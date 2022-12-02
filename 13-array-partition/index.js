@@ -28,24 +28,20 @@ const partitionHoare = (arr, pivot) => {
     return arr;
 }
 
-const partitionLomuto = (arr) => {
-
-    let left = 0;
-    let right = arr.length - 1;
+const partitionLomuto = (arr, left = 0, right = arr.length - 1) => {
 
     let pivot = arr[right];
     let index = left; 
 
-    for (let i = 0; i < right; i++) {
-        if (arr[i] <= pivot) {
+    for (let i = left; i < arr.length; i++) {
+        if (arr[i] < pivot) {
             swap(arr, index, i);
             index++;
         }
     }
     swap(arr, index, right);
-    index++;
     
-    return { index, arr };
+    return index;
 }
 
 const unsorted = [10, 1, 9, 2, 8, 3, 7, 4, 6, 5];
