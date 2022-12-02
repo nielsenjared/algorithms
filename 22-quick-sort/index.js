@@ -4,26 +4,45 @@ const swap = (arr, left, right) => {
     arr[right] = temp;
 
     return arr;
-}
+    
 // using Lomuto
+// const partition = (arr, left = 0, right = arr.length - 1) => {
+
+//     let pivot = arr[right];
+//     let index = left; 
+
+//     console.log( "party", { left, right} )
+
+
+//     for (let i = left; i < arr.length; i++) {
+//         if (arr[i] < pivot) {
+//             swap(arr, index, i);
+//             index++;
+//         }
+//     }
+//     swap(arr, index, right);
+    
+//     return index;
+// }
+
+}
 const partition = (arr) => {
 
-    let left = 0;
-    let right = arr.length - 1;
+    let pivot = arr[arr.length - 1];
+    let index = 0; 
 
-    let pivot = arr[right];
-    let index = left; 
+    console.log( "party", { left: index, right: (arr.length - 1)} )
 
-    for (let i = 0; i < right; i++) {
-        if (arr[i] <= pivot) {
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < pivot) {
             swap(arr, index, i);
             index++;
         }
     }
-    swap(arr, index, right);
-    index++;
+    swap(arr, index, arr.length - 1);
     
-    return { index, arr };
+    return index;
 }
 
 const quickSort = (arr, left = 0, right = arr.length - 1) => {
@@ -31,13 +50,11 @@ const quickSort = (arr, left = 0, right = arr.length - 1) => {
             return;
         }
 
-        let part = partition(arr);
+        console.log( "quick", { left, right} )
 
-        let index = part.index;
+        let index = partition(arr);
+        // let index = partition(arr, left, right);
 
-        left = part.arr[0];
-
-        right = part.arr[part.arr.length - 1];
 
         quickSort(arr, left, index - 1);
         quickSort(arr, index, right);
