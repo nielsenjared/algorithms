@@ -33,7 +33,7 @@ const partitionLomuto = (arr, left = 0, right = arr.length - 1) => {
     let pivot = arr[right];
     let index = left; 
 
-    for (let i = left; i < arr.length; i++) {
+    for (let i = left; i < right; i++) {
         if (arr[i] < pivot) {
             swap(arr, index, i);
             index++;
