@@ -5,6 +5,23 @@ def swap(arr, left, right):
 
     return arr
 
+def partition(arr, left = 0, right = None):
+
+    if right == None: 
+        right = len(arr) - 1
+        
+    pivot = arr[right]
+    index = left
+
+    for i in range(left, right):
+        if arr[i] < pivot:
+            swap(arr, index, i)
+            index += 1
+    
+    swap(arr, index, right)
+
+    return index 
+
 def partition(arr, pivot):
     left = 0
     right = len(arr) - 1
