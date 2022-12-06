@@ -40,6 +40,8 @@ const partitionLomuto = (arr, left = 0, right = arr.length - 1) => {
         }
     }
     swap(arr, index, right);
+
+    console.log(arr)
     
     return index;
 }

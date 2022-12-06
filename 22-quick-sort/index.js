@@ -23,14 +23,13 @@ const partition = (arr, left = 0, right = arr.length - 1) => {
 }
 
 const quickSort = (arr, left = 0, right = arr.length - 1) => {
-        if (left >= right) {
-            return;
-        }
-
+    if (left < right) {
         let index = partition(arr, left, right);
 
         quickSort(arr, left, index - 1);
         quickSort(arr, index, right);
+    }
+
     return arr;
 }
 

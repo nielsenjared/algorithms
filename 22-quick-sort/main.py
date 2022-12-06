@@ -41,17 +41,15 @@ def quick_sort(arr, left = 0, right = None):
     if right == None:
         right = len(arr) - 1
 
-    if (left >= right):
-        return
-    
-    pivot = (left + right) // 2
+    if (left < right):
+        pivot = (left + right) // 2
 
-    part = partition(arr, pivot)
+        part = partition(arr, pivot)
 
-    index = part[pivot]
+        index = part[pivot]
 
-    quick_sort(arr, left, index - 1)
-    quick_sort(arr, index, right)
+        quick_sort(arr, left, index - 1)
+        quick_sort(arr, index, right)
     
     return arr
 
