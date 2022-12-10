@@ -5,7 +5,6 @@ def factorial(n):
         return result
     
     for i in range(2, n + 1):
-        result = result * i
+        result *= i
     
-    return result
-    
+    return result    

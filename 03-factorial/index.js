@@ -7,8 +7,12 @@ const factorial = n => {
 
 
     for (let i = 2; i <= n; i++) {
-        result = result * i;
+        result *= i;
     }
 
     return result;
 }
+
+let result = factorial(5)
+
+console.log(result)
