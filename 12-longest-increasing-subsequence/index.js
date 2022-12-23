@@ -1,16 +1,16 @@
 const longestIncreasingSubsequence = (n) => {
-    const tally = [1];
     let result = 1;
+    const tally = [1];
     
     for (let i = 1; i < n.length; i++) {
         tally[i] = 1;
         for (let j = 0; j < i; j++) {
-            let current = tally[j] + 1;
+            let lis = tally[j] + 1;
             
-            if (n[j] < n[i] && current > tally[i]) {
-                tally[i] = current
-                if (current > result) {
-                    result = current;
+            if (n[j] < n[i] && lis > tally[i]) {
+                tally[i] = lis
+                if (lis > result) {
+                    result = lis;
                 }
             }
         }

@@ -1,17 +1,17 @@
 def longest_increasing_subsequence(n):
+    result = 1
     tally = [1]
-    result = 0
     
     for i in range(1, len(n)):
         tally += [1]
         for j in range(i):
-            current = tally[j] + 1
+            lis = tally[j] + 1
 
-            if (n[j] < n[i] and current > tally[i]):
-                tally[i] = current
+            if (n[j] < n[i] and lis > tally[i]):
+                tally[i] = lis
 
-                if current > result:
-                    result = current
+                if lis > result:
+                    result = lis
                     
     return result
 
