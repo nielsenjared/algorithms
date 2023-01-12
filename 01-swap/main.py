@@ -5,7 +5,7 @@ def swap(x, y):
     temp = x
     x = y
     y = temp
-    return [x, y]
+    return (x, y)
 
 result = swap(x, y)
 
